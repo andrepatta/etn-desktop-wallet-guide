@@ -1,9 +1,9 @@
 export BUILD = build
-export BOOKNAME = monero-gui-wallet-guide
+export BOOKNAME = electroneum-gui-wallet-guide
 export TITLE = title.txt
 export METADATA = metadata.xml
 export TOC = --toc --toc-depth=3
-export COVER_IMAGE = media/monero-logo-1280.png
+export COVER_IMAGE = media/electroneum-logo-1280.png
 export LATEX_CLASS = report
 export LATEX_ENGINE = xelatex
 export MARGIN = margin=1in

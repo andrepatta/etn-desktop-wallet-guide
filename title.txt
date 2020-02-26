@@ -1,2 +1,2 @@
-% Monero GUI Wallet Guide
+% **Electroneum Desktop Wallet** Wallet Guide
 % maintained by ErCiccione

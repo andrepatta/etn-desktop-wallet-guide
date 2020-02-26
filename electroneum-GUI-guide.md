@@ -1,9 +1,9 @@
 <div align="center"> 
-<img src="media/monero-symbol-480.png" width="150" height="150"> <img src="https://raw.githubusercontent.com/monero-ecosystem/meta/master/media/ecosystem-logo.png" width="150" height="150">
+<img src="media/electroneum-symbol-480.png" width="150" height="150">
 </div>
 <div align="center"> 
-<h1>Guide for the Monero GUI wallet</h1>
-<i>All you need to understand every single part of your Monero wallet, plus some useful tips</i>
+<h1>Guide for the Electroneum Desktop Wallet wallet</h1>
+<i>All you need to understand every single part of your Electroneum wallet, plus some useful tips</i>
 </div>
 
 &nbsp;
@@ -35,10 +35,10 @@
         -   [Restoring from seed](#restoring-from-seed)
         -   [Restoring from keys](#restoring-from-keys)
     -   [Open a wallet from file](#open-a-wallet-from-file)
--   [Monero Account](#monero-account)
--   [Send Monero](#send-monero)
+-   [Electroneum Account](#electroneum-account)
+-   [Send Electroneum](#send-electroneum)
     -   [Address Book](#address-book)
--   [Receive Monero](#receive-monero)
+-   [Receive Electroneum](#receive-electroneum)
     -   [Merchant view](#merchant-view)
 -   [Transactions History](#transactions-history)
 -   [Advanced Features](#advanced-features)
@@ -69,22 +69,22 @@
 Preface
 =======
 
-This guide is open source and maintained by ErCiccione, of the Monero
+This guide is open source and maintained by ErCiccione, of the Electroneum
 community. If you have suggestions or wish to contribute to the
 development of this guide, feel free to open Pull Requests or Issues on
 the GitHub repository where this document is maintained:
-[github.com/monero-ecosystem/monero-GUI-guide](https://github.com/monero-ecosystem/monero-GUI-guide).
+[github.com/andrepatta/etn-desktop-wallet-guide](https://github.com/andrepatta/etn-desktop-wallet-guide).
  
 
 For the online version of this guide, click
-[here](https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md)
+[here](https://github.com/andrepatta/etn-desktop-wallet-guide/blob/master/etn-desktop-wallet-guide.md)
 
 Translations
 ------------
 
 This document will be localized into several languages. You will find
 all available translations in the [dedicated section on
-GitHub](https://github.com/monero-ecosystem/monero-GUI-guide/tree/master/translations)
+GitHub](https://github.com/andrepatta/etn-desktop-wallet-guide/tree/master/translations)
 after the next version (1.6) of this guide will be released.
 
 Windows Preparation
@@ -94,8 +94,8 @@ If you are on Windows:
 
 -   Make sure that your antivirus does not block the program.
 
-A miner is included in the Monero GUI software and, as a result, most
-anti virus software flags the Monero GUI files as malware and
+A miner is included in the **Electroneum Desktop Wallet** software and, as a result, most
+anti virus software flags the **Electroneum Desktop Wallet** files as malware and
 subsequently quarantines them. Fortunately, however, there's a fairly
 trivial work around you can use. That is:
 
@@ -140,9 +140,9 @@ Welcome
 
 ![Welcome](media/wizard_0-welcome.png)
 
-Extract the package and click on `monero-wallet-gui`.
+Extract the package and click on `electroneum-wallet-gui`.
 
-Welcome to Monero GUI Wallet.
+Welcome to **Electroneum Desktop Wallet** Wallet.
 
 (1) **Language:** Click here to see a list of available languages.\
 (2) **Continue:** If you are satisfied with the current language,
@@ -172,13 +172,13 @@ and privacy needs.\
 (1) **Simple mode:** This mode will connect your wallet to a
     remote node. Please note that remote nodes may weaken your privacy.
     Choose this if you have low privacy requirement, need to quickly
-    access the Monero network, and only intend to manage small amount of
-    Monero.\
+    access the Electroneum network, and only intend to manage small amount of
+    Electroneum.\
 (2) **Simple mode (bootstrap):** This mode is similar to the previous
     one, as it will connect you to a remote node, but will download the
     blockchain to your local drive in the background. As soon as you
     have a local copy of the entire blockchain, you will be connected to
-    your local node. It allows you to start using Monero immediately and
+    your local node. It allows you to start using Electroneum immediately and
     have a fallback option if your local blockchain needs to sync new
     blocks while offering the privacy benefits of a full node when fully
     synced.\
@@ -222,7 +222,7 @@ On this page you can choose how to connect to the wallet and to the
 network:
 
 (1) **Create a new wallet:** Start the procedure to make a new wallet.
-    Choose this option if this is your first time using Monero.\
+    Choose this option if this is your first time using Electroneum.\
 (2) **Create new wallet from hardware:** Create a new wallet from an
     hardware device (like Ledger or Trezor)\
 (3) **Open a wallet from file:** Choose this option to select a
@@ -233,7 +233,7 @@ network:
 (5) **Change wallet mode:** Click here to switch between modes and
     choose the wallet mode that best fits your needs.\
 (6) **Mainnet:** *Advanced:* Select this from the dropdown list to use
-    the main Monero network\
+    the main Electroneum network\
 (7) **Testnet:** *Advanced:* Select this from the dropdown list if you
     would like to use a development network instead of the main network.
     Testnet is designed to let developers test new features that are not
@@ -241,7 +241,7 @@ network:
 (8) **Stagenet:** *Advanced:* Select this from the dropdown list if you
     would like to use a network for staging instead of the main network.
     Stagenet mimics the features of Mainnet and is designed to let end
-    users test Monero without the risk of losing funds.\
+    users test Electroneum without the risk of losing funds.\
 (9) **Number of KDF rounds:** *Advanced:* Adjust the number of Key
     Derivation Function rounds in order to enhance the overall security
     of the generated keys. Any random large number will increase
@@ -257,7 +257,7 @@ Here you can create a new wallet:
 (1) **Wallet name:** Give a name for your wallet (in this example
     `testname` is used).\
 (2) **Mnemonic seed: Write down your [mnemonic
-    seed](https://getmonero.org/resources/moneropedia/mnemonicseed.html)
+    seed](https://getelectroneum.org/resources/electroneumpedia/mnemonicseed.html)
     and keep it safe. Your seed is the master key of your wallet, you
     can use it to recover your funds.**\
 (3) **Wallet location:** Select the destination folder of the wallet.
@@ -325,16 +325,16 @@ Create new wallet from hardware
     lower height (e.g. `1330000`) so the wallet will start scanning from
     there, saving you some time. More information about restore height
     on
-    [StackExchange](https://monero.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
+    [StackExchange](https://electroneum.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
 (5) **Subaddress lookahead (optional):** pregenerate a number of
     accounts with a number of subaddresses each.\
 (6) **Device name:** Select the hardware wallet you want to use.\
      
 
-Step by step guide on how to generate a Ledger wallet with the Monero
+Step by step guide on how to generate a Ledger wallet with the Electroneum
 GUI for all operating systems (StackExchange):\
-[How do I generate a Ledger Monero wallet with the GUI
-(monero-wallet-gui)?](https://monero.stackexchange.com/questions/9901/how-do-i-generate-a-ledger-monero-wallet-with-the-gui-monero-wallet-gui)
+[How do I generate a Ledger Electroneum wallet with the GUI
+(electroneum-wallet-gui)?](https://electroneum.stackexchange.com/questions/9901/how-do-i-generate-a-ledger-electroneum-wallet-with-the-gui-electroneum-wallet-gui)
 
 ### Add a password
 
@@ -398,11 +398,11 @@ wallet. You need to put the following information:
     height (e.g. `1330000`) so the wallet will start scanning from
     there, saving you some time. More information about restore height
     on
-    [StackExchange](https://monero.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
+    [StackExchange](https://electroneum.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
 (4) **Wallet location:** Select the destination folder of the wallet.
 
-A detailed guide is available on getmonero.org: ['How to restore your
-account'](https://getmonero.org/resources/user-guides/restore_account.html)
+A detailed guide is available on getelectroneum.org: ['How to restore your
+account'](https://getelectroneum.org/resources/user-guides/restore_account.html)
 
 ### Restoring from keys
 
@@ -410,7 +410,7 @@ account'](https://getmonero.org/resources/user-guides/restore_account.html)
 
 Restoring from keys is quite easy and can be extremely useful,
 especially if you are moving your wallet from an online service like
-MyMonero. You need to put the following information:
+MyElectroneum. You need to put the following information:
 
 (1) **Wallet name:** Give a name for your wallet (in this example
     `testname` is used).\
@@ -427,13 +427,13 @@ MyMonero. You need to put the following information:
     height (e.g. `1330000`) so the wallet will start scanning from
     there, saving you some time. More information about restore height
     on
-    [StackExchange](https://monero.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
+    [StackExchange](https://electroneum.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
 (6) **Wallet location:** Select the destination folder of the wallet.
 
-When everything is ready click the right arrow and then the `Use Monero`
+When everything is ready click the right arrow and then the `Use Electroneum`
 button.\
-A detailed guide is available on getmonero.org: ['Restoring wallet from
-keys'](https://getmonero.org/resources/user-guides/restore_from_keys.html)
+A detailed guide is available on getelectroneum.org: ['Restoring wallet from
+keys'](https://getelectroneum.org/resources/user-guides/restore_from_keys.html)
 
 Open a wallet from file
 -----------------------
@@ -441,12 +441,12 @@ Open a wallet from file
 After clicking this option a window will pop up. Navigate to your file
 with the extension `.keys`, select it and click the right arrow.
 
-Monero Account
+Electroneum Account
 ==============
 
 ![account](media/black_account.png)
 
-The `Account` tab provides tool to handle your different Monero accounts
+The `Account` tab provides tool to handle your different Electroneum accounts
 within your wallet.
 
 (1) **Balance All:** Let you see the sum of all your accounts balances,
@@ -466,26 +466,26 @@ Each of your accounts are filled with their own informations:
     numbers*\
 (6) **Balance:** The account total balance. It cumulates the main
     address and all subaddresses for this account. *Note: Subaddresses
-    are managend through the [Send](#send-monero) screen*\
+    are managend through the [Send](#send-electroneum) screen*\
 (7) **Set Label:** Click on this button to set this account label.\
 (8) **Copy Address:** Click on this button to copy this account address
     to the clipboard
 
-Send Monero
+Send Electroneum
 ===========
 
 ![send](media/black_send.png)
 
 The `Send` tab provides tools for creating outgoing transactions.
 
-(1) **Amount:** This is how much Monero you want to send.\
+(1) **Amount:** This is how much Electroneum you want to send.\
 (2) **Transaction priority:** This is the priority level your
     transaction will receive in the pool of transactions waiting to
     be confirmed. The more you pay, the higher your transactions
     priority for inclusion in a block.\
     *Currently staying with the default or the slow option is likely to
     get you into the next block.*\
-(3) **Address:** This is where you put the Monero address that you are
+(3) **Address:** This is where you put the Electroneum address that you are
     sending to. Best practice is to copy and paste the address to
     prevent errors, accompanied with visually checking that the pasted
     address is correct.\
@@ -494,7 +494,7 @@ The `Send` tab provides tools for creating outgoing transactions.
     exchange they will give you a payment ID that you must include here.
     This is so they know which incoming transaction is from you.\
     *If you forget to add your payment ID you should still be able to
-    recover your funds by contacting the party you sent Monero to.*\
+    recover your funds by contacting the party you sent Electroneum to.*\
     *Long payment IDs are being deprecated. It is hidden by default. If
     you need to specify a long payment ID, you should enable it first on
     the [Settings &gt; Layout](#layout) tab. You should encourage
@@ -520,7 +520,7 @@ The `Address Book` tab lets you save addresses that you frequently
 transact with. This is a convenient place to copy addresses from when
 creating transactions.
 
-Receive Monero
+Receive Electroneum
 ==============
 
 ![receive](media/black_receive.png)
@@ -532,14 +532,14 @@ The `Receive` tab provides tools for generating subaddresses.
 (2) **Create new address:** This button allows you to create
     new subaddresses. You can create as many as you would like. *Learn
     more about
-    [subaddresses](https://monero.stackexchange.com/questions/3673/what-is-a-sub-address).*\
+    [subaddresses](https://electroneum.stackexchange.com/questions/3673/what-is-a-sub-address).*\
 (3) **Set Label:** Click on this button to set this subaddress label.\
 (4) **QR code:** This is a QR code that has your selected address
-    embedded into it. It can be used as a way to give others your Monero
+    embedded into it. It can be used as a way to give others your Electroneum
     address by scanning the code.\
 (5) **Save:** Click here to save the QR code as a `png` image.\
 (6) **Copy:** Click here to copy the QR code corresponding URL formated
-    as \*monero:
+    as \*electroneum:
     <address>
     -   
 
@@ -554,9 +554,9 @@ incoming transactions
 
 (1) **QR code:** This is a QR code that has your selected address, and
     optionally the amount, embedded into it. It can be used as a way to
-    give others your Monero address by scanning the code.\
+    give others your Electroneum address by scanning the code.\
 (2) **Amount:** This is for creating a payment request, enter the amount
-    of Monero you would like to receive.\
+    of Electroneum you would like to receive.\
 (3) **Payment URL:** This is the URL corresponding to the address and
     amount you have chosen. It could be copied by clicking on it and
     sent to a customer.\
@@ -587,7 +587,7 @@ received on your account.
     `Tx ID`, `Address Label`, `Address`, and `Payment ID`.\
 (5) **Prove transaction:** Clicking here will generate a payment proof
     in case of a dispute. More details on proving payments can be found
-    [here](https://getmonero.org/resources/user-guides/prove-payment.html)
+    [here](https://getelectroneum.org/resources/user-guides/prove-payment.html)
     *For outgoing transaction only*\
 (6) **Set description:** You can optionally click here to set a
     description of your choice to this transaction.\
@@ -619,7 +619,7 @@ Prove - Check
 -------------
 
 The `Prove/check` tab provides tools for proving a payment or validating
-proof of a payment. This is necessary with Monero because these details
+proof of a payment. This is necessary with Electroneum because these details
 are not available on the blockchain.
 
 ### Prove Transaction
@@ -640,8 +640,8 @@ You need to put the following information:
 (4) **Generate:** Click here once you've entered all the details to
     generate your proof.  
 
-A detailed guide is available on getmonero.org: ['How to prove
-payment'](https://getmonero.org/resources/user-guides/prove-payment.html)
+A detailed guide is available on getelectroneum.org: ['How to prove
+payment'](https://getelectroneum.org/resources/user-guides/prove-payment.html)
 
 ### Check Transaction
 
@@ -672,7 +672,7 @@ outputs that could not be spent in this transaction.
 
 (1) **Mark as spent filename:** This tool will mark outputs that are
     known to be spent. After running
-    monero-blockchain-mark-spent-outputs, import the resulting file to
+    electroneum-blockchain-mark-spent-outputs, import the resulting file to
     avoid using these outputs as decoys in constructed ring signatures.
     This file is stored in the .shared-ringdb folder by default.\
 (2) **Mark as spent output:** This will mark or unmark as spent a chosen
@@ -691,10 +691,10 @@ outputs that could not be spent in this transaction.
     for a transaction. Copy the ring members from 4 to get those for the
     key image, or manually type in your own.\
 (6) **Intent to spend:** Select this if you are certain that you will
-    spend Monero on a key-reusing fork. This will aggressively modify
+    spend Electroneum on a key-reusing fork. This will aggressively modify
     the input selection algorithm to give you the greatest plausible
     deniability.\
-(7) **Possibility to spend:** Select this if you may spend Monero on a
+(7) **Possibility to spend:** Select this if you may spend Electroneum on a
     key-reusing fork. This will modify the input selection algorithm.
     Uncheck this only if you are certain you will not use a key-reusing
     fork.\
@@ -725,7 +725,7 @@ file.
 
 (3) **Verify message:** This is where you will put a message that has
     been signed.\
-(4) **Address:** This is where you will enter the public Monero address
+(4) **Address:** This is where you will enter the public Electroneum address
     of the signer.\
 (5) **Signature:** This is where you will enter the signature you
     are verifying. Once all the required information has been entered
@@ -754,7 +754,7 @@ file.
 
 (3) **File:** This is where you enter the path to a file that has
     been signed. Click Browse to navigate the file system.\
-(4) **Address:** This is where you will enter the public Monero address
+(4) **Address:** This is where you will enter the public Electroneum address
     of the signer.\
 (5) **Signature:** This is where you will enter the signature you
     are verifying. Once all the required information has been entered
@@ -775,7 +775,7 @@ The `Settings` tab provides tools for customizing configuration options.
 (2) **Create a view-only wallet:** Click here to generate a view-only
     (or audit) wallet, which is capable to see existing outgoing
     transactions and all incoming transactions. See this
-    [user-guide](https://getmonero.org/resources/user-guides/view_only.html)
+    [user-guide](https://getelectroneum.org/resources/user-guides/view_only.html)
     for more information.\
 (3) **Show seed & keys:** This button will redirect you to the [Seed and
     keys](#seed-and-keys) tab.\
@@ -859,7 +859,7 @@ remote nodes' section](#about-remote-nodes) of this guide.
 ![settings-info](media/black_settings-info.png)
 
 (1) **GUI Version:** Version of the GUI wallet installed.\
-(2) **Embedded Monero Version:** Version of the embedded daemon in use.\
+(2) **Embedded Electroneum Version:** Version of the embedded daemon in use.\
 (3) **Wallet path:** Where the wallet is located on your computer.\
 (4) **Wallet creation height:** Change the block height that a wallet
     rescan will go back to.\
@@ -881,14 +881,14 @@ spend key.
     a copy securely.** The mnemonic seed is a 25 word phrase that
     contains all the information needed to view and spend funds. *Learn
     more about [mnemonic
-    seeds](https://getmonero.org/resources/moneropedia/mnemonicseed.html).*\
+    seeds](https://getelectroneum.org/resources/electroneumpedia/mnemonicseed.html).*\
 (2) **Secret view key:** Secret view keys allows the holder to view your
     wallets incoming transactions, but not outgoing. It is sometimes
     useful for auditing purposes to give your secret view key to a third
     party.\
 (3) **Public view key:** The public view key is used for stealth
     address creation. *Learn more about [view
-    keys](https://getmonero.org/resources/moneropedia/viewkey.html).*\
+    keys](https://getelectroneum.org/resources/electroneumpedia/viewkey.html).*\
 (4) **Secret spend key: DO NOT share your secret spend key with anyone.
     The secret spend key is used to sign transactions and should be
     regarded with the same security as your mnemonic seed.**\
@@ -897,7 +897,7 @@ spend key.
     a transaction. This is what prevents double-spends as the network
     enforces the rule that a key image can be spent only once. *Learn
     more about [spend
-    keys](https://getmonero.org/resources/moneropedia/spendkey.html).*
+    keys](https://getelectroneum.org/resources/electroneumpedia/spendkey.html).*
 
 ![seed-keys](media/black_seed-keys_2.png)
 
@@ -914,7 +914,7 @@ Binaries Verification
 
 Verify that the files you downloaded match the official ones. You can
 use [this step-by-step
-guide](https://getmonero.org/resources/user-guides/verification-windows-beginner.html)
+guide](https://getelectroneum.org/resources/user-guides/verification-windows-beginner.html)
 with pictures (easy, for Windows user).
 
 About remote nodes
@@ -928,7 +928,7 @@ inaccurate information to learn more about transactions you make. Please
 make sure to use a node you trust (hopefully your own) and remain aware
 of these limitations. Users who prioritize privacy should use a full
 node instead. A number of open nodes are listed at
-[moneroworld.com](https://moneroworld.com) and
+[electroneumworld.com](https://electroneumworld.com) and
 [node-o-matic](https://node.pwned.systems)
 
 Bootstrap nodes
@@ -944,39 +944,39 @@ bootstrap setting), nodes may track your IP address, track your "restore
 height" and associated block request data, and send you inaccurate
 information to learn more about transactions you make. Please make sure
 to use a node you trust (hopefully your own) and remain aware of these
-limitations. Keep the Monero full node software operating on your
+limitations. Keep the Electroneum full node software operating on your
 computer even when you are not using the wallet to reduce the amount of
 leaked data. More information at
-https://getmonero.org/resources/moneropedia/bootstrap-node.html
+https://getelectroneum.org/resources/electroneumpedia/bootstrap-node.html
 
 Common issues and solutions
 ===========================
 
--   **[How do I generate a Ledger Monero wallet with the
-    GUI?](https://monero.stackexchange.com/questions/9901/how-do-i-generate-a-ledger-monero-wallet-with-the-gui-monero-wallet-gui)**
+-   **[How do I generate a Ledger Electroneum wallet with the
+    GUI?](https://electroneum.stackexchange.com/questions/9901/how-do-i-generate-a-ledger-electroneum-wallet-with-the-gui-electroneum-wallet-gui)**
 -   **[I am missing (not seeing) a transaction to (in) the GUI
-    (zero balance)](https://monero.stackexchange.com/questions/6640/i-am-missing-not-seeing-a-transaction-to-in-the-gui-zero-balance)**
+    (zero balance)](https://electroneum.stackexchange.com/questions/6640/i-am-missing-not-seeing-a-transaction-to-in-the-gui-zero-balance)**
 -   **[I am using the GUI and my daemon doesn't start
-    anymore](https://monero.stackexchange.com/questions/6825/i-am-using-the-gui-and-my-daemon-doesnt-start-anymore)**
+    anymore](https://electroneum.stackexchange.com/questions/6825/i-am-using-the-gui-and-my-daemon-doesnt-start-anymore)**
 -   **[Transaction stuck as “pending” in the
-    GUI](https://monero.stackexchange.com/questions/6649/transaction-stuck-as-pending-in-the-gui)**
+    GUI](https://electroneum.stackexchange.com/questions/6649/transaction-stuck-as-pending-in-the-gui)**
 -   **[My GUI feels buggy / freezes all the
-    time](https://monero.stackexchange.com/questions/6651/my-gui-feels-buggy-freezes-all-the-time)**
+    time](https://electroneum.stackexchange.com/questions/6651/my-gui-feels-buggy-freezes-all-the-time)**
 -   **[My name contains a special (non-ASCII) character (e.g. é, ø,
     â, Ö) and I can't create a wallet with the
-    GUI](https://monero.stackexchange.com/questions/6823/my-name-contains-a-special-non-ascii-character-e-g-%c3%a9-%c3%b8-%c3%a2-%c3%96-and-i-cant-c)**
+    GUI](https://electroneum.stackexchange.com/questions/6823/my-name-contains-a-special-non-ascii-character-e-g-%c3%a9-%c3%b8-%c3%a2-%c3%96-and-i-cant-c)**
 -   **[The GUI uses all my bandwidth and I can't browse anymore or use
     another application that requires internet
-    connection](https://monero.stackexchange.com/questions/6653/the-gui-uses-all-my-bandwidth-and-i-cant-browse-anymore-or-use-another-applicat)**
+    connection](https://electroneum.stackexchange.com/questions/6653/the-gui-uses-all-my-bandwidth-and-i-cant-browse-anymore-or-use-another-applicat)**
 -   **[How do I move the blockchain (data.mdb) to a different directory
     during (or after) the initial sync without losing the
-    progress?](https://monero.stackexchange.com/questions/7225/how-do-i-move-the-blockchain-data-mdb-to-a-different-directory-during-or-afte)**
+    progress?](https://electroneum.stackexchange.com/questions/7225/how-do-i-move-the-blockchain-data-mdb-to-a-different-directory-during-or-afte)**
 -   **[How do I change the language of the 25 word mnemonic seed in the
     GUI or
-    CLI?](https://monero.stackexchange.com/questions/7373/how-do-i-change-the-language-of-the-25-word-mnemonic-seed-in-the-gui/)**
+    CLI?](https://electroneum.stackexchange.com/questions/7373/how-do-i-change-the-language-of-the-25-word-mnemonic-seed-in-the-gui/)**
 -   **I use a high resolution display and the GUI looks extremely
     small**\
     This problem will be fixed soon, but there is a workaround for
-    Windows: right click on monero-wallet-gui.exe, select properties
+    Windows: right click on electroneum-wallet-gui.exe, select properties
     --&gt; compatibility. you'll find a 'high DPI' option, change value
     there from "Application" to "System" or vice versa
