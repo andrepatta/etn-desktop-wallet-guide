@@ -79,16 +79,3 @@ Adding a translation is very easy:
 4. Push the changes to your local branch and open a pull request.
 
 **Do not edit** the files contained in the /translations folder. They are manually built. All changes MUST be done on the appropriate source folder (/en for English, /es for Spanish, etc..).
-
-### Support
-If you need **help/support**, open an issue on this repository or contact ErCiccione. You can do so:
-  
-+ On the **live support chat of the localization workgroup**: `#electroneum-translations` (on IRC/Freenode, MatterMost, riot/matrix)
-+ By **email**: translate[at]getelectroneum[dot]org
-+ On **reddit**: just PM /u/erciccione
-
-## Donations
-The creation and maintainance of this guide require a lot of hours of work. I think it's a very useful document and I'm happy to work on it voluntarily. The only problem is that the creation/maintainance of the guide **requires** a high consumption of beer. If you would like to help me refill my fridge and show the middle finger to my liver, consider donating to this Electroneum address:
-&nbsp;
-
-84fCZdZik8KauctPhh6ZQ1KgMb99zpKKQWvR6kSCedtr4L596YjLiaaFYqhUU9pV6qXWjTLoNWUVCiKinC9uFKuq8azHTit

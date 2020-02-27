@@ -222,20 +222,6 @@ network:
     keys.\
 (5) **Change wallet mode:** Click here to switch between modes and
     choose the wallet mode that best fits your needs.\
-(6) **Mainnet:** *Advanced:* Select this from the dropdown list to use
-    the main Electroneum network\
-(7) **Testnet:** *Advanced:* Select this from the dropdown list if you
-    would like to use a development network instead of the main network.
-    Testnet is designed to let developers test new features that are not
-    available on Mainnet or Stagenet.\
-(8) **Stagenet:** *Advanced:* Select this from the dropdown list if you
-    would like to use a network for staging instead of the main network.
-    Stagenet mimics the features of Mainnet and is designed to let end
-    users test Electroneum without the risk of losing funds.\
-(9) **Number of KDF rounds:** *Advanced:* Adjust the number of Key
-    Derivation Function rounds in order to enhance the overall security
-    of the generated keys. Any random large number will increase
-    the security.
 
 Create new wallet
 -----------------
@@ -316,9 +302,9 @@ Create new wallet from hardware
     there, saving you some time. More information about restore height
     on
     [StackExchange](https://electroneum.stackexchange.com/questions/7581/what-is-the-relevance-of-the-restore-height).\
-(5) **Subaddress lookahead (optional):** pregenerate a number of
+(5) **Device name:** Select the hardware wallet you want to use.\
+(6) **Subaddress lookahead (optional):** pregenerate a number of
     accounts with a number of subaddresses each.\
-(6) **Device name:** Select the hardware wallet you want to use.\
      
 
 Step by step guide on how to generate a Ledger wallet with the Electroneum
@@ -533,29 +519,6 @@ The `Receive` tab provides tools for generating subaddresses.
     <address>
     -   
 
-Merchant view
--------------
-
-![merchant](media/merchant.png)
-
-The `Merchant` view is intending to offer professionals a nice app on
-their points of sell. It let you craft payment requests, and monitor
-incoming transactions
-
-(1) **QR code:** This is a QR code that has your selected address, and
-    optionally the amount, embedded into it. It can be used as a way to
-    give others your Electroneum address by scanning the code.\
-(2) **Amount:** This is for creating a payment request, enter the amount
-    of Electroneum you would like to receive.\
-(3) **Payment URL:** This is the URL corresponding to the address and
-    amount you have chosen. It could be copied by clicking on it and
-    sent to a customer.\
-(4) **Tracking:** If you tick this box, you'll see a list of incoming
-    transactions.\
-(5) **Incoming transaction:** Those are the transaction currently seen
-    on the blockchain and the transaction pool, with
-    associated confirmations.
-
 Transaction History
 ===================
 
@@ -588,24 +551,6 @@ received on your account.
 
 Advanced Features
 =================
-
-Solo mining
------------
-
-![mining](media/black_mining.png)
-
-The Mining tab provides a one click CPU miner that is embedded into the
-GUI.
-
-(1) **CPU threads:** Number of CPU threads to use for mining.\
-(2) **threads auto-configuration:** Set automatically the number of
-    threads either to the recommended number, or to the max number.\
-(3) **Background mining:** Check this box to enable experimental
-    background mining. This should allow you to use your computer
-    normally while mining.\
-(4) **Start mining:** Start the miner.\
-(5) **Stop mining:** Stop the miner.\
-(6) **Status:** Indicates the mining state and hashrate.
 
 Prove - Check
 -------------
@@ -651,50 +596,6 @@ information:
 (4) **Signature:** This is the signature generated to prove payment.\
 (5) **Check:** Click here once you've entered all the details to check
     that the transaction proof is valid.
-
-Shared RingDB
--------------
-
-![shared ringdb 1/2](media/black_sharedringdb.png)
-
-This is an advanced tool that can be used to improve the privacy of ring
-signatures. The outputs used in ring signatures can be adapted to
-mitigate the privacy loss when using a key-reusing fork or to avoid
-outputs that could not be spent in this transaction.
-
-(1) **Mark as spent filename:** This tool will mark outputs that are
-    known to be spent. After running
-    electroneum-blockchain-mark-spent-outputs, import the resulting file to
-    avoid using these outputs as decoys in constructed ring signatures.
-    This file is stored in the .shared-ringdb folder by default.\
-(2) **Mark as spent output:** This will mark or unmark as spent a chosen
-    single output. Outputs are represented by 64-character strings. The
-    outputs added in this field will not be used as decoys in
-    constructed ring signatures. Unmarked outputs may (but will
-    not necessarily) by used as decoys.
-
-![shared ringdb 2/2](media/black_sharedringdb_2.png)
-
-(3) **Key image input:** Add the key image that was used on the
-    key-reusing fork.\
-(4) **Get ring:** Press the "Get Ring" button to get the ring members
-    for the given key image in 3.\
-(5) **Set ring:** Press the "Set Ring" button to set the ring members
-    for a transaction. Copy the ring members from 4 to get those for the
-    key image, or manually type in your own.\
-(6) **Intent to spend:** Select this if you are certain that you will
-    spend Electroneum on a key-reusing fork. This will aggressively modify
-    the input selection algorithm to give you the greatest plausible
-    deniability.\
-(7) **Possibility to spend:** Select this if you may spend Electroneum on a
-    key-reusing fork. This will modify the input selection algorithm.
-    Uncheck this only if you are certain you will not use a key-reusing
-    fork.\
-(8) **Relative:** When selected, the offsets are encoded relative to the
-    previous, as opposed to absolute (transactions use relative
-    offsets).\
-(9) **Segregation height:** The block height at which the key-reusing
-    fork splits.
 
 Sign - verify Message
 ---------------------

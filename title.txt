@@ -1,2 +1,2 @@
-% **Electroneum Desktop Wallet** Wallet Guide
-% maintained by ErCiccione
+% Electroneum Desktop Wallet Guide
+% maintained by Andre Patta
