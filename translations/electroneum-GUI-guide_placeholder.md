@@ -688,13 +688,7 @@ The most important options are:
 (1) **Hide balance:** If you are running your wallet in public, you may
     want to hide its balance. This can be useful for point of sales
     systems.\
-(2) **Enable Payment ID:** Long payment IDs are disabled by default.
-    Click here to enable it. This can be useful for transfers to
-    exchanges that require a long payment ID such as Binance (at the
-    time of writing). Using long payment IDs is detrimental to
-    your privacy. Please ask services that still use this deprecated
-    feature to use subaddresses instead.\
-(3) **Lock wallet:** Set this to automatically lock your wallet after N
+(2) **Lock wallet:** Set this to automatically lock your wallet after N
     minutes of inactivity. This ensures no one is able to use your
     wallet while you are away from keyboard.
 
@@ -754,7 +748,8 @@ remote nodes' section](#about-remote-nodes) of this guide.
 (5) **Wallet log path:** Where the logs for this wallet will be saved.\
 (6) **Wallet mode:** Display the wallet mode chosen in the
     [wizard](#choose-wallet-mode).\
-(7) **Copy to clipboard:** Copy all information to clipboard.
+(7) **Graphics Mode:** Current Graphics Mode usued to render the wallet interface.\
+(8) **Copy to clipboard:** Copy all information to clipboard.
 
 Seed and keys
 -------------
